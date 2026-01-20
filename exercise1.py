@@ -1,20 +1,16 @@
+# Import pandas library
 import pandas as pd
 
-# Create a DataFrame
-df = pd.DataFrame({
-    "Number": [1, 2, 3, 4, 5]
-})
+# Two-dimensional list (rows and columns)
+data = [
+    [101, "Amit", 85],
+    [102, "Neha", 92],
+    [103, "Raj", 78]
+]
 
-# Empty list to store values for the new column
-squares = []
+# Create DataFrame with column names
+df = pd.DataFrame(data, columns=["Roll No", "Name", "Marks"])
 
-# Use for loop to calculate square of each number
-for n in df["Number"]:
-    squares.append(n * n)
-
-# Add the list as a new column in DataFrame
-df["Square"] = squares
-
-# Display the updated DataFrame
+# Display the DataFrame
 print(df)
 
